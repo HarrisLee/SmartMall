@@ -10,4 +10,6 @@
 
 @interface NSString (RMFoundation)
 
+- (NSDate *)dateWithFormat:(NSString *)format;
+
 @end

@@ -16,5 +16,6 @@
 #import "UIColor+RMFoundation.h"
 #import "NSDate+RMFoundation.h"
 #import "UIImage+RMFoundation.h"
+#import "NSString+RMFoundation.h"
 
 #endif /* GlobalHeader_h */

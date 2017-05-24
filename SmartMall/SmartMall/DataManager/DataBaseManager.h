@@ -7,13 +7,13 @@
 //
 
 #import <Foundation/Foundation.h>
-//#import "FMDatabase.h"
-//#import "FMDatabaseQueue.h"
-//#import "FMDatabaseAdditions.h"
+#import "FMDatabase.h"
+#import "FMDatabaseQueue.h"
+#import "FMDatabaseAdditions.h"
 #import "RMUtils.h"
 #import "BaseDBModel.h"
 
-#define DB_FILE_PATH        [Utils getDstFilePath:@"SmartMall.db" withFolder:@"DataBase"]
+#define DB_FILE_PATH        [RMUtils documentsFilePath:@"SmartMall.db"]
 
 @interface DataBaseManager : NSObject
 

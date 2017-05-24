@@ -10,6 +10,14 @@
 
 @implementation NSDate (RMFoundation)
 
+- (NSString *)stringWithDateFormat:(NSString *)formatString
+{
+    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+    [dateFormatter setDateFormat:formatString];
+    NSString *dateStr = [dateFormatter stringFromDate:self];
+    return dateStr;
+}
+
 + (NSString *)stringFromDate:(NSDate *)date withFormat:(NSString *)formatString
 {
     NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];

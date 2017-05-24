@@ -55,6 +55,8 @@
 /*! 将NSDictionary对象转换成NSString*/
 + (NSString *)serializationObject:(id)object;
 
++ (NSMutableDictionary*)getPropertyWithType:(Class)objClass withSuper:(BOOL)getSuper;
+
 /*! 获取Model的属性数组(getSuper   YES:获取父类属性  NO:不获取父类属性)*/
 + (NSArray *)getPropertyList:(Class)obj superClass:(BOOL)superCls;
 

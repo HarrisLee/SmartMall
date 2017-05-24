@@ -225,6 +225,71 @@
     }
 }
 
++ (NSMutableDictionary*)getPropertyWithType:(Class)objClass withSuper:(BOOL)getSuper
+{
+    unsigned int outCount, i;
+    objc_property_t *properties = class_copyPropertyList(objClass, &outCount);
+    NSMutableArray *propertyArray = [NSMutableArray arrayWithCapacity:outCount];
+    NSMutableArray *typeArray = [NSMutableArray arrayWithCapacity:outCount];
+    for (i = 0; i < outCount; i++) {
+        objc_property_t property = properties[i];
+        NSString *propertyName = [NSString stringWithCString:property_getName(property) encoding:NSUTF8StringEncoding];
+        if([propertyName isEqualToString:@"primaryKey"]||[propertyName isEqualToString:@"rowid"])
+        {
+            continue;
+        }
+        [propertyArray addObject:propertyName];
+        NSString *propertyType = [NSString stringWithCString: property_getAttributes(property) encoding:NSUTF8StringEncoding];
+        /*
+         c char
+         i int
+         l long
+         s short
+         d double
+         f float
+         @ id //指针 对象
+         ...  BOOL 获取到的表示 方式是 char
+         .... ^i 表示  int*  一般都不会用到
+         */
+        
+        if ([propertyType hasPrefix:@"T@"]) {
+            [typeArray addObject:[propertyType substringWithRange:NSMakeRange(3, [propertyType rangeOfString:@","].location-4)]];
+        }
+        else if ([propertyType hasPrefix:@"Ti"])
+        {
+            [typeArray addObject:@"int"];
+        }
+        else if ([propertyType hasPrefix:@"Tf"])
+        {
+            [typeArray addObject:@"float"];
+        }
+        else if([propertyType hasPrefix:@"Td"]) {
+            [typeArray addObject:@"double"];
+        }
+        else if([propertyType hasPrefix:@"Tl"])
+        {
+            [typeArray addObject:@"long"];
+        }
+        else if ([propertyType hasPrefix:@"Tc"]) {
+            [typeArray addObject:@"char"];
+        }
+        else if([propertyType hasPrefix:@"Ts"])
+        {
+            [typeArray addObject:@"short"];
+        }
+    }
+    free(properties);
+    id obj = [[objClass alloc] init];
+    if(getSuper && [obj superclass] != [NSObject class])
+    {
+        NSMutableDictionary *tmpDic = [self getPropertyWithType:[obj superclass] withSuper:getSuper];
+        [propertyArray addObjectsFromArray:[tmpDic objectForKey:@"name"]];
+        [typeArray addObjectsFromArray:[tmpDic objectForKey:@"type"]];
+        
+    }
+    return [NSMutableDictionary dictionaryWithObjectsAndKeys:propertyArray,@"name",typeArray,@"type",nil];
+}
+
 + (NSArray *)getPropertyList:(Class)obj superClass:(BOOL)superCls
 {
     NSMutableArray *propertiesArray = [[NSMutableArray alloc] init];

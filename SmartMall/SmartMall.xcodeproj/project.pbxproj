@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		249EE46AC94AF680970DCE69 /* libPods-SmartMall.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0CCBCD19B6B82DB0CECE6BF8 /* libPods-SmartMall.a */; };
 		44D676541ED5272F00579497 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 44D676531ED5272F00579497 /* main.m */; };
 		44D676571ED5272F00579497 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 44D676561ED5272F00579497 /* AppDelegate.m */; };
 		44D6765F1ED5272F00579497 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 44D6765E1ED5272F00579497 /* Assets.xcassets */; };
@@ -32,6 +33,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0CCBCD19B6B82DB0CECE6BF8 /* libPods-SmartMall.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SmartMall.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		44D6764F1ED5272F00579497 /* SmartMall.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SmartMall.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		44D676531ED5272F00579497 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		44D676551ED5272F00579497 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -79,6 +81,8 @@
 		44D676B31ED57B0700579497 /* NSString+RMFoundation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+RMFoundation.h"; sourceTree = "<group>"; };
 		44D676B41ED57B0700579497 /* NSString+RMFoundation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+RMFoundation.m"; sourceTree = "<group>"; };
 		44D676B61ED57BF400579497 /* iOSPlatform.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = iOSPlatform.plist; sourceTree = "<group>"; };
+		64A20D17F0F0B1CE5DB3B5C0 /* Pods-SmartMall.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SmartMall.release.xcconfig"; path = "Pods/Target Support Files/Pods-SmartMall/Pods-SmartMall.release.xcconfig"; sourceTree = "<group>"; };
+		AD63607DA3AF56FF0E98D321 /* Pods-SmartMall.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SmartMall.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SmartMall/Pods-SmartMall.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +90,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				249EE46AC94AF680970DCE69 /* libPods-SmartMall.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -97,6 +102,8 @@
 			children = (
 				44D676511ED5272F00579497 /* SmartMall */,
 				44D676501ED5272F00579497 /* Products */,
+				843304BCFECBF659EDB8D945 /* Pods */,
+				D39F71E808433697394EC6FF /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -281,6 +288,23 @@
 			path = KMNavigationBarTransition;
 			sourceTree = "<group>";
 		};
+		843304BCFECBF659EDB8D945 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				AD63607DA3AF56FF0E98D321 /* Pods-SmartMall.debug.xcconfig */,
+				64A20D17F0F0B1CE5DB3B5C0 /* Pods-SmartMall.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		D39F71E808433697394EC6FF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0CCBCD19B6B82DB0CECE6BF8 /* libPods-SmartMall.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -288,9 +312,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 44D676661ED5272F00579497 /* Build configuration list for PBXNativeTarget "SmartMall" */;
 			buildPhases = (
+				6BF4AA8D538B624C9B0CD213 /* [CP] Check Pods Manifest.lock */,
 				44D6764B1ED5272F00579497 /* Sources */,
 				44D6764C1ED5272F00579497 /* Frameworks */,
 				44D6764D1ED5272F00579497 /* Resources */,
+				EB962CF20252247EFA6E2DAB /* [CP] Embed Pods Frameworks */,
+				2BCD4E9C73856885AC735AEC /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -345,6 +372,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2BCD4E9C73856885AC735AEC /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SmartMall/Pods-SmartMall-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6BF4AA8D538B624C9B0CD213 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		EB962CF20252247EFA6E2DAB /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SmartMall/Pods-SmartMall-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		44D6764B1ED5272F00579497 /* Sources */ = {
@@ -469,6 +544,7 @@
 		};
 		44D676671ED5272F00579497 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AD63607DA3AF56FF0E98D321 /* Pods-SmartMall.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -483,6 +559,7 @@
 		};
 		44D676681ED5272F00579497 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 64A20D17F0F0B1CE5DB3B5C0 /* Pods-SmartMall.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
