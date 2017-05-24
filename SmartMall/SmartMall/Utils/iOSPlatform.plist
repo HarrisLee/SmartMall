@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>iPhone Simulator</key>
+	<string>iPhone Simulator</string>
+	<key>x86_64</key>
+	<string>iPhone Simulator</string>
+	<key>iPhone4,1</key>
+	<string>iPhone 4s</string>
+	<key>iPhone5,1</key>
+	<string>iPhone 5</string>
+	<key>iPhone5,2</key>
+	<string>iPhone 5</string>
+	<key>iPhone5,3</key>
+	<string>iPhone 5C</string>
+	<key>iPhone5,4</key>
+	<string>iPhone 5C</string>
+	<key>iPhone6,1</key>
+	<string>iPhone 5S</string>
+	<key>iPhone6,2</key>
+	<string>iPhone 5S</string>
+	<key>iPhone7,1</key>
+	<string>iPhone 6 Plus</string>
+	<key>iPhone7,2</key>
+	<string>iPhone 6</string>
+	<key>iPhone8,1</key>
+	<string>iPhone 6S</string>
+	<key>iPhone8,2</key>
+	<string>iPhone 6S Plus</string>
+	<key>iPhone8,4</key>
+	<string>iPhone SE</string>
+	<key>iPhone9,1</key>
+	<string>iPhone 7</string>
+	<key>iPhone9,2</key>
+	<string>iPhone 7 Plus</string>
+</dict>
+</plist>
