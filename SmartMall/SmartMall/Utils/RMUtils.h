@@ -3,7 +3,7 @@
 //  SmartMall
 //
 //  Created by JianRongCao on 24/05/2017.
-//  Copyright © 2017 JianRongCao. All rights reserved.
+//  Copyright © 2017 SmartHome. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
@@ -55,6 +55,7 @@
 /*! 将NSDictionary对象转换成NSString*/
 + (NSString *)serializationObject:(id)object;
 
+/*! 获取Model的属性数组和对应的属性类别(getSuper   YES:获取父类属性  NO:不获取父类属性)*/
 + (NSMutableDictionary*)getPropertyWithType:(Class)objClass withSuper:(BOOL)getSuper;
 
 /*! 获取Model的属性数组(getSuper   YES:获取父类属性  NO:不获取父类属性)*/
