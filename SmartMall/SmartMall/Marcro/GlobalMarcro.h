@@ -29,4 +29,8 @@ Stuff; \
 _Pragma("clang diagnostic pop") \
 } while (0)
 
+//屏幕的宽和高
+#define kScreenWidth [UIScreen mainScreen].bounds.size.width
+#define kScreenHeight [UIScreen mainScreen].bounds.size.height
+
 #endif /* GlobalMarcro_h */

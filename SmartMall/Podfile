@@ -4,9 +4,16 @@ platform :ios, '8.0'
 
 def common
     pod 'SDWebImage', '~>3.8'
-    pod 'AFNetworking', '~> 3.0'
+    pod 'YTKNetwork'
 	pod 'Masonry', '~>1.0.0'
 	pod 'FMDB', '~> 2.3'
+	pod 'Toast', '~> 3.1.0'
+	pod 'MBProgressHUD', '~> 1.0.0'
+	pod 'YYKit'
+	pod 'MJRefresh'
+	pod 'TPKeyboardAvoiding'
+	pod 'DZNEmptyDataSet'
+	pod 'DateTools'
 end
 
 target 'SmartMall' do
