@@ -13,8 +13,12 @@
 
 static NSString * const kSUCCESS = @"0";
 
+//最近一次获取的Token
+static NSString * const kLastAPNSToken = @"kLastAPNSToken";
+
 static CGFloat    kTABBAR_HEIGHT = 49.0f;
 
 static CGFloat    kSTATUSBAR_HEIGHT = 20.0;
+
 
 #endif /* AppConstant_h */

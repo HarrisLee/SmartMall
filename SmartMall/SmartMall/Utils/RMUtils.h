@@ -90,6 +90,15 @@
 /*! 获取当前链接的Wifi名称*/
 + (NSString *)getSSIDName;
 
+/*! 清除缓存*/
+- (void)clearCache;
+
+/*! 某个文件大小*/
+- (float)fileSizeAtPath:(NSString *)path;
+
+/*! 某个文件夹大小*/
+- (float)folderSizeAtPath:(NSString *)path;
+
 /*! 获取Dic的某个Key的值*/
 NSString *stringFromDic(NSDictionary *dic, NSString *key);
 

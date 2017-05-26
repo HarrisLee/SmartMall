@@ -424,6 +424,49 @@
     return @"";
 }
 
+- (float)fileSizeAtPath:(NSString *)path
+{
+    NSFileManager *fileManager = [NSFileManager defaultManager];
+    if([fileManager fileExistsAtPath:path]) {
+        long long size = [fileManager attributesOfItemAtPath:path error:nil].fileSize;
+        return size/1024.0/1024.0;
+    }
+    return 0;
+}
+
+- (float)folderSizeAtPath:(NSString *)path
+{
+    NSFileManager *fileManager = [NSFileManager defaultManager];
+    float folderSize = 0.0;
+    if ([fileManager fileExistsAtPath:path]) {
+        NSArray *childerFiles = [fileManager subpathsAtPath:path];
+        for (NSString *fileName in childerFiles) {
+            NSString *absolutePath = [path stringByAppendingPathComponent:fileName];
+            folderSize += [self fileSizeAtPath:absolutePath];
+        }
+        //SDWebImage框架自身计算缓存的实现
+        folderSize += [[SDImageCache sharedImageCache] getSize]/1024.0/1024.0;
+        return folderSize;
+    }
+    return 0;
+}
+
+- (void)clearCache
+{
+    NSArray *pathcaches = NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES);
+    NSString *cacheDirectory = [pathcaches objectAtIndex:0];
+    NSFileManager *fileManager = [NSFileManager defaultManager];
+    if ([fileManager fileExistsAtPath:cacheDirectory]) {
+        NSArray *childerFiles = [fileManager subpathsAtPath:cacheDirectory];
+        for (NSString *fileName in childerFiles) {
+            NSString *absolutePath = [cacheDirectory stringByAppendingPathComponent:fileName];
+            [fileManager removeItemAtPath:absolutePath error:nil];
+        }
+    }
+    [[SDImageCache sharedImageCache] cleanDisk];
+}
+
+
 NSString *stringFromDic(NSDictionary *dic, NSString *key)
 {
     if (nil != dic && [dic isKindOfClass:[NSDictionary class]]) {

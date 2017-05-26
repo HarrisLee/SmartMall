@@ -15,10 +15,10 @@
 
 @implementation HomeViewController
 
-- (void)viewDidLoad {
+- (void)viewDidLoad
+{
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    DLog(@"1111");
     self.title = @"首页";
     
 }

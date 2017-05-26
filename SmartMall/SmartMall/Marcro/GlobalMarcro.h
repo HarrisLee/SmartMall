@@ -41,4 +41,6 @@ _Pragma("clang diagnostic pop") \
 //拼接字符串
 #define NSStringFormat(format,...) [NSString stringWithFormat:format,##__VA_ARGS__]
 
+#define NSUserDefaultsManager  [NSUserDefaults standardUserDefaults]
+
 #endif /* GlobalMarcro_h */

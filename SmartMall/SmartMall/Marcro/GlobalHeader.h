@@ -20,6 +20,7 @@
 #import "NSString+RMFoundation.h"
 #import "RMUtils.h"
 #import "LocationManager.h"
+#import "RMBaseRequest.h"
 
 //************************三方库************************
 #import <MJRefresh/MJRefresh.h>
