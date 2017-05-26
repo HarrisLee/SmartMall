@@ -7,6 +7,7 @@
 //
 
 #import "RMUtils.h"
+#import <SystemConfiguration/CaptiveNetwork.h>
 #import <CoreTelephony/CTTelephonyNetworkInfo.h>
 #import <CoreTelephony/CTCarrier.h>
 #import <mach/mach.h>
@@ -56,7 +57,13 @@
 
 + (BOOL)isValidString:(id)object
 {
-    return object && [object isKindOfClass:[NSString class]];
+    BOOL ret = NO;
+    if ([object isKindOfClass:[NSString class]]) {
+        if ([[object stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]] length] > 0) {
+            ret = YES;
+        }
+    }
+    return ret;
 }
 
 #pragma mark 时间格式化
@@ -153,6 +160,11 @@
     NSString *paltformName = [paltformDictionary valueForKey:platform];
     
     return  paltformName ? paltformName : @"Unknown Platform";
+}
+
++ (NSString *)getSystemVersion
+{
+    return [[UIDevice currentDevice] systemVersion];
 }
 
 #pragma mark 检测手机运营商
@@ -391,6 +403,39 @@
     if (nil == image)
         image = [UIImage imageNamed:imageName];
     return image;
+}
+
++ (NSString *)getSSIDName
+{
+    NSArray *ifs = (__bridge_transfer id)CNCopySupportedInterfaces();
+    NSLog(@"Supported interfaces: %@", ifs);
+    id info = nil;
+    for (NSString *ifnam in ifs) {
+        info = (__bridge_transfer id)CNCopyCurrentNetworkInfo((__bridge CFStringRef)ifnam);
+        NSLog(@"%@ => %@", ifnam, info);
+        NSDictionary * infoDic = [[NSDictionary alloc]initWithDictionary:info];
+        if ([self isValidDictionary:infoDic]) {
+            NSString * currentWifi = stringFromDic(infoDic, @"SSID");
+            if ([self isValidString:currentWifi]) {
+                return currentWifi;
+            }
+        }
+    }
+    return @"";
+}
+
+NSString *stringFromDic(NSDictionary *dic, NSString *key)
+{
+    if (nil != dic && [dic isKindOfClass:[NSDictionary class]]) {
+        id temp = [dic objectForKey:key];
+        if ([temp isKindOfClass:[NSString class]]) {
+            return temp;
+        }
+        else if ([temp isKindOfClass:[NSNumber class]]) {
+            return [temp stringValue];
+        }
+    }
+    return @"";
 }
 
 NSString* ClassName(Class cls)

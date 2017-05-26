@@ -44,6 +44,8 @@
 /*! 获取硬件型号，如iPhone 6S,iPad Pro等*/
 + (NSString *)getPlatformVersion;
 
+/*! 获取系统版本*/
++ (NSString *)getSystemVersion;
 
 /*! 返回运营商平台*/
 + (NSString *)checkChinaMobile;
@@ -85,6 +87,12 @@
 /*! 优先使用ContentOfFile的方式加载图片*/
 + (UIImage *)imageNameWithString:(NSString *)imageName;
 
-NSString* ClassName(Class cls);
+/*! 获取当前链接的Wifi名称*/
++ (NSString *)getSSIDName;
+
+/*! 获取Dic的某个Key的值*/
+NSString *stringFromDic(NSDictionary *dic, NSString *key);
+
+NSString *ClassName(Class cls);
 
 @end

@@ -23,9 +23,14 @@ static LaunchManager *manager = nil;
     return manager;
 }
 
+- (void)globalConfiguration
+{
+    
+}
+
 - (void)launchApplication:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-
+    [[LocationManager defaultManager] startLocation];
 }
 
 @end

@@ -17,13 +17,13 @@
 
 @interface DataBaseManager : NSObject
 
-+(DataBaseManager *)defaultDBManager;
++ (DataBaseManager *)defaultDBManager;
 
 - (void)createTableWith:(Class)objClass;
 - (BOOL)insertToDB:(BaseDBModel*)model;
 - (BOOL)insertData:(NSArray*)dataArray;
 - (BOOL)deleteModel:(BaseDBModel*)model;
 - (BOOL)updateModel:(BaseDBModel*)model;
-- (NSArray*)selectData:(BaseDBModel*)model orderBy:(NSString *)columeName offset:(int)offset count:(int)count;
+- (NSArray *)selectData:(BaseDBModel*)model orderBy:(NSString *)columeName offset:(int)offset count:(int)count;
 
 @end

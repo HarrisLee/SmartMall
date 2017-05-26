@@ -11,6 +11,11 @@
 
 #define WS(weakSelf)   __weak __typeof(&*self)weakSelf = self;
 
+//当前系统版本
+#define IOS10_OR_LATER	([[[UIDevice currentDevice] systemVersion] floatValue] >= 10.0)
+#define IOS9_OR_LATER	([[[UIDevice currentDevice] systemVersion] floatValue] >= 9.0)
+#define IOS8_OR_LATER	([[[UIDevice currentDevice] systemVersion] floatValue] >= 8.0)
+
 //日志打印
 #ifdef DEBUG
 #define LRString [NSString stringWithFormat:@"%s", __FILE__].lastPathComponent
@@ -32,5 +37,8 @@ _Pragma("clang diagnostic pop") \
 //屏幕的宽和高
 #define kScreenWidth [UIScreen mainScreen].bounds.size.width
 #define kScreenHeight [UIScreen mainScreen].bounds.size.height
+
+//拼接字符串
+#define NSStringFormat(format,...) [NSString stringWithFormat:format,##__VA_ARGS__]
 
 #endif /* GlobalMarcro_h */

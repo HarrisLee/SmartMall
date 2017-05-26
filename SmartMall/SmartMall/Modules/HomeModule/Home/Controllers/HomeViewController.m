@@ -20,6 +20,7 @@
     // Do any additional setup after loading the view.
     DLog(@"1111");
     self.title = @"首页";
+    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -30,7 +31,11 @@
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
 {
     [super touchesBegan:touches withEvent:event];
-    [self.navigationController pushViewController:[[NextViewController alloc] init] animated:YES];
+//    [self.navigationController pushViewController:[[NextViewController alloc] init] animated:YES];
+    NSURL *url = [NSURL URLWithString:UIApplicationOpenSettingsURLString];
+    if ([[UIApplication sharedApplication] canOpenURL:url]) {
+        [[UIApplication sharedApplication] openURL:url];
+    }
 }
 
 /*

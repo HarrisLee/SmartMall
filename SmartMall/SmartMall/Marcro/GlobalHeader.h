@@ -18,7 +18,8 @@
 #import "NSDate+RMFoundation.h"
 #import "UIImage+RMFoundation.h"
 #import "NSString+RMFoundation.h"
-
+#import "RMUtils.h"
+#import "LocationManager.h"
 
 //************************三方库************************
 #import <MJRefresh/MJRefresh.h>

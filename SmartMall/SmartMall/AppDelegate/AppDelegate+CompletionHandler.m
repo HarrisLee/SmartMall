@@ -1,32 +1,18 @@
 //
-//  AppDelegate.m
+//  AppDelegate+CompletionHandler.m
 //  SmartMall
 //
-//  Created by JianRongCao on 24/05/2017.
+//  Created by JianRongCao on 26/05/2017.
 //  Copyright © 2017 SmartHome. All rights reserved.
 //
 
-#import "AppDelegate.h"
-#import "ContainerViewController.h"
-#import "LaunchManager.h"
+#import "AppDelegate+CompletionHandler.h"
 
+@implementation AppDelegate (CompletionHandler)
 
-@interface AppDelegate ()
-
-@end
-
-@implementation AppDelegate
-
-- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
-    [[LaunchManager shareInstance] launchApplication:application
-                       didFinishLaunchingWithOptions:launchOptions];
-    
-    self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
-    ContainerViewController *container = [[ContainerViewController alloc] init];
-    self.window.rootViewController = container;
-    [self.window makeKeyAndVisible];
-    return YES;
++ (AppDelegate *)shareAppDelegate
+{
+    return (AppDelegate *)[[UIApplication sharedApplication] delegate];
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application {
@@ -43,6 +29,7 @@
 
 - (void)applicationWillEnterForeground:(UIApplication *)application {
     // Called as part of the transition from the background to the active state; here you can undo many of the changes made on entering the background.
+    DLog(@"applicationWillEnterForeground");
 }
 
 
@@ -55,5 +42,9 @@
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
 
+- (void)openURL:(NSURL*)url options:(NSDictionary<NSString *, id> *)options completionHandler:(void (^ __nullable)(BOOL success))completion
+{
+    NSLog(@"%@",url);
+}
 
 @end
