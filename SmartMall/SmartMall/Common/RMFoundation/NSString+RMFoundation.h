@@ -12,4 +12,8 @@
 
 - (NSDate *)dateWithFormat:(NSString *)format;
 
+- (CGFloat)contentWidthWithFont:(UIFont *)font limit:(CGFloat)limit;
+
+- (CGFloat)contentWidthWithFont:(UIFont *)font;
+
 @end

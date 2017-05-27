@@ -9,6 +9,10 @@
 #ifndef GlobalHeader_h
 #define GlobalHeader_h
 
+#import <Photos/Photos.h>
+#import "RITLPhotoConfig.h"
+#import "RITLPhotoStore.h"
+
 #import "AppConstant.h"
 #import "EnumConstant.h"
 #import "NSDate+RMFoundation.h"
@@ -21,6 +25,8 @@
 #import "RMUtils.h"
 #import "LocationManager.h"
 #import "RMBaseRequest.h"
+#import "PPNetworkHelper.h"
+#import "PPNetworkCache.h"
 
 //************************三方库************************
 #import <MJRefresh/MJRefresh.h>

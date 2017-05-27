@@ -30,6 +30,7 @@ static LaunchManager *manager = nil;
 
 - (void)launchApplication:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+//    [[UIApplication sharedApplication] setStatusBarHidden:NO];
     [self globalConfiguration];
     
 
