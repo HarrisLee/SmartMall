@@ -90,7 +90,7 @@
             color = [UIColor colorWithHexString:@"#18b4ed"];
             break;
         case NaviColorRed:
-            color = [UIColor colorWithHexString:@"#f35335"];
+            color = [UIColor colorWithHexString:@"#71bd4f"];
             break;
         case NaviColorClear:
             color = [UIColor clearColor];
