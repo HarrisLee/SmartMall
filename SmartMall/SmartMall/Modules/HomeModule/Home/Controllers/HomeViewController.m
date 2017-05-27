@@ -12,6 +12,8 @@
 #import "RITLPhotoNavigationViewController.h"
 #import "RITLPhotoNavigationViewModel.h"
 
+#import "RMBannerView.h"
+
 @interface HomeViewController ()
 
 @end
@@ -25,10 +27,16 @@
     self.title = @"首页";
     [self setRightButtonWithTitle:@"购物车" action:@selector(showShoppingCart)];
     UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
-    button.frame = CGRectMake(0, 100, 100, 100);
+    button.frame = CGRectMake(0, 300, 100, 100);
     button.backgroundColor = [UIColor redColor];
     [button addTarget:self action:@selector(ssssss) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:button];
+    
+    RMBannerView *banner = [[RMBannerView alloc] initWithFrame:CGRectMake(0, 0, kScreenWidth, 200)];
+    [banner itemClicked:^(NSDictionary *obj) {
+        
+    }];
+    [self.view addSubview:banner];
 }
 
 - (void)showShoppingCart

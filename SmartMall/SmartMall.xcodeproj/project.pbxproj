@@ -44,6 +44,9 @@
 		440D3D3A1ED9254F00C09F01 /* UIViewController+RITLPhotoAlertController.m in Sources */ = {isa = PBXBuildFile; fileRef = 440D3D121ED9254F00C09F01 /* UIViewController+RITLPhotoAlertController.m */; };
 		440D3D3B1ED9254F00C09F01 /* RITLPhotos.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 440D3D1D1ED9254F00C09F01 /* RITLPhotos.xcassets */; };
 		440D3D3D1ED925C400C09F01 /* Photos.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 440D3D3C1ED925C400C09F01 /* Photos.framework */; };
+		440D3D411ED92F5800C09F01 /* RMBannerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 440D3D401ED92F5800C09F01 /* RMBannerView.m */; };
+		440D3D441ED94ED800C09F01 /* BannerCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 440D3D431ED94ED800C09F01 /* BannerCell.m */; };
+		440D3D461ED9547300C09F01 /* default_375_250@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 440D3D451ED9547300C09F01 /* default_375_250@2x.png */; };
 		444E66A11ED6B0FC0016C80D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 444E66A01ED6B0FC0016C80D /* AppDelegate.m */; };
 		444E66AB1ED6B15F0016C80D /* LaunchManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 444E66A51ED6B15F0016C80D /* LaunchManager.m */; };
 		444E66AC1ED6B15F0016C80D /* BaseDBModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 444E66A81ED6B15F0016C80D /* BaseDBModel.m */; };
@@ -152,6 +155,11 @@
 		440D3D1C1ED9254F00C09F01 /* RITLPhotoConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RITLPhotoConfig.h; sourceTree = "<group>"; };
 		440D3D1D1ED9254F00C09F01 /* RITLPhotos.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = RITLPhotos.xcassets; sourceTree = "<group>"; };
 		440D3D3C1ED925C400C09F01 /* Photos.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Photos.framework; path = System/Library/Frameworks/Photos.framework; sourceTree = SDKROOT; };
+		440D3D3F1ED92F5800C09F01 /* RMBannerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RMBannerView.h; sourceTree = "<group>"; };
+		440D3D401ED92F5800C09F01 /* RMBannerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RMBannerView.m; sourceTree = "<group>"; };
+		440D3D421ED94ED800C09F01 /* BannerCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BannerCell.h; sourceTree = "<group>"; };
+		440D3D431ED94ED800C09F01 /* BannerCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BannerCell.m; sourceTree = "<group>"; };
+		440D3D451ED9547300C09F01 /* default_375_250@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "default_375_250@2x.png"; sourceTree = "<group>"; };
 		444E669F1ED6B0FC0016C80D /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		444E66A01ED6B0FC0016C80D /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		444E66A41ED6B15F0016C80D /* LaunchManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LaunchManager.h; sourceTree = "<group>"; };
@@ -411,6 +419,18 @@
 			path = Protocol;
 			sourceTree = "<group>";
 		};
+		440D3D3E1ED92F4500C09F01 /* BannerView */ = {
+			isa = PBXGroup;
+			children = (
+				440D3D3F1ED92F5800C09F01 /* RMBannerView.h */,
+				440D3D401ED92F5800C09F01 /* RMBannerView.m */,
+				440D3D421ED94ED800C09F01 /* BannerCell.h */,
+				440D3D431ED94ED800C09F01 /* BannerCell.m */,
+				440D3D451ED9547300C09F01 /* default_375_250@2x.png */,
+			);
+			path = BannerView;
+			sourceTree = "<group>";
+		};
 		444E669E1ED6B0FC0016C80D /* AppDelegate */ = {
 			isa = PBXGroup;
 			children = (
@@ -597,6 +617,7 @@
 		44D6766A1ED5365100579497 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				440D3D3E1ED92F4500C09F01 /* BannerView */,
 				44D676751ED559C800579497 /* RMFoundation */,
 			);
 			path = Common;
@@ -745,6 +766,7 @@
 			files = (
 				44D6765F1ED5272F00579497 /* Assets.xcassets in Resources */,
 				440D3D2F1ED9254F00C09F01 /* Localizable.strings in Resources */,
+				440D3D461ED9547300C09F01 /* default_375_250@2x.png in Resources */,
 				44D676B71ED57BF400579497 /* iOSPlatform.plist in Resources */,
 				440D3CC01ED910F900C09F01 /* back@3x.png in Resources */,
 				440D3D3B1ED9254F00C09F01 /* RITLPhotos.xcassets in Resources */,
@@ -809,8 +831,10 @@
 				440D3D281ED9254F00C09F01 /* RITLPhotoCacheManager.mm in Sources */,
 				440D3D271ED9254F00C09F01 /* RITLPhotoBridgeManager.m in Sources */,
 				440D3D381ED9254F00C09F01 /* UIButton+RITLBlockButton.m in Sources */,
+				440D3D441ED94ED800C09F01 /* BannerCell.m in Sources */,
 				444E66AC1ED6B15F0016C80D /* BaseDBModel.m in Sources */,
 				44D6767F1ED55D1D00579497 /* RMViewController.m in Sources */,
+				440D3D411ED92F5800C09F01 /* RMBannerView.m in Sources */,
 				440D3D2D1ED9254F00C09F01 /* RITLPhotosViewController.m in Sources */,
 				440D3D241ED9254F00C09F01 /* RITLPhotoGroupViewModel.m in Sources */,
 				44D676B51ED57B0700579497 /* NSString+RMFoundation.m in Sources */,

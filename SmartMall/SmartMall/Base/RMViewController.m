@@ -20,10 +20,11 @@
 
 @implementation RMViewController
 
-- (void)viewDidLoad {
+- (void)viewDidLoad
+{
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    
+    self.automaticallyAdjustsScrollViewInsets = NO;
     self.view.backgroundColor = [UIColor colorWithHexString:@"#F2F2F2"];
     self.naviColor = NaviColorBlue;
     [[NSNotificationCenter defaultCenter] addObserver:self

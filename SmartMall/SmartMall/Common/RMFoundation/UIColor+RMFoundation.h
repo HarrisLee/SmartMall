@@ -14,6 +14,9 @@
 #undef  RGBACOLOR
 #define RGBACOLOR(r,g,b,a) [UIColor colorWithRed:r/255.0 green:g/255.0 blue:b/255.0 alpha:a]
 
+#undef  RandomColor
+#define RandomColor RGBACOLOR(arc4random_uniform(256), arc4random_uniform(256), arc4random_uniform(256), arc4random_uniform(256))
+
 @interface UIColor (RMFoundation)
 
 + (UIColor *)colorWithRGBHex:(UInt32)hex;
