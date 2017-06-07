@@ -3,7 +3,7 @@
 //  SmartHome
 //
 //  Created by JianRongCao on 15/11/23.
-//  Copyright © 2015年 SNZoo. All rights reserved.
+//  Copyright © 2015年 SmartMall. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>

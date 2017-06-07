@@ -19,9 +19,11 @@
 
 @interface UIColor (RMFoundation)
 
+/*! like [UIColor colorWithRGBHex:0x18b4ed]*/
 + (UIColor *)colorWithRGBHex:(UInt32)hex;
 + (UIColor *)colorWithRGBHex:(UInt32)hex alpha:(float)alpha;
 
+/*! like [UIColor colorWithHexString:@"#18b4ed"]*/
 + (UIColor *)colorWithHexString:(NSString *)stringToConvert;
 + (UIColor *)colorWithHexString:(NSString *)stringToConvert alpha:(float)alpha;
 

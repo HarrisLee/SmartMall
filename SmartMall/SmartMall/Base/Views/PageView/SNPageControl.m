@@ -3,7 +3,7 @@
 //  SmartHome
 //
 //  Created by JianRongCao on 15/11/23.
-//  Copyright © 2015年 SNZoo. All rights reserved.
+//  Copyright © 2015年 SmartMall. All rights reserved.
 //
 
 #import "SNPageControl.h"
@@ -44,7 +44,7 @@
         dot.layer.cornerRadius = height/2.0;
         dot.backgroundColor = (idx == self.currentPage) ? self.currentPageIndicatorTintColor : self.pageIndicatorTintColor;
         [dot setHidden:(self.numberOfPages == 1 && self.hidesForSinglePage)];
-        [self.items safeAddObject:dot];
+        [self.items addObject:dot];
         [self addSubview:dot];
     }
     CGSize size = [self sizeForNumberOfPages:self.numberOfPages];

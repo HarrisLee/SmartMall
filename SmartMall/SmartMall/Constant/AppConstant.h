@@ -20,6 +20,8 @@ static NSString * const NETWORK_ERROR_MSG = @"网络连接不可用，请检查�
 static NSString * const kLastAPNSToken = @"kLastAPNSToken";
 
 //常用的高度
+static CGFloat    kNAVIGATION_BAR_HEIGHT = 64.0f;
+
 static CGFloat    kTABBAR_HEIGHT = 49.0f;
 
 static CGFloat    kSTATUSBAR_HEIGHT = 20.0;
@@ -31,5 +33,11 @@ static CGFloat    kSCREEN_HEIGHT_568 = 568.0f;
 static CGFloat    kSCREEN_HEIGHT_667 = 667.0f;
 
 static CGFloat    kSCREEN_HEIGHT_736 = 736.0f;
+
+static CGFloat    kSCREEN_WIDTH_320 = 320;
+
+static CGFloat    kSCREEN_WIDTH_375 = 375;
+
+static CGFloat    kSCREEN_WIDTH_414 = 414;
 
 #endif /* AppConstant_h */
