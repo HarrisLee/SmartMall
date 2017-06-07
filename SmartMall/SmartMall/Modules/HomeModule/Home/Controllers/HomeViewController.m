@@ -24,7 +24,7 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    self.title = @"首页";
+    self.navigationItem.title = @"首页";
     [self setRightButtonWithTitle:@"购物车" action:@selector(showShoppingCart)];
     UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
     button.frame = CGRectMake(0, 300, 100, 100);

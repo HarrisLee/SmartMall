@@ -13,8 +13,8 @@
 
 //当前系统版本
 #define IOS10_OR_LATER	([[[UIDevice currentDevice] systemVersion] floatValue] >= 10.0)
-#define IOS9_OR_LATER	([[[UIDevice currentDevice] systemVersion] floatValue] >= 9.0)
-#define IOS8_OR_LATER	([[[UIDevice currentDevice] systemVersion] floatValue] >= 8.0)
+#define IOS9_OR_LATER	([[[UIDevice currentDevice] systemVersion] floatValue] >=  9.0)
+#define IOS8_OR_LATER	([[[UIDevice currentDevice] systemVersion] floatValue] >=  8.0)
 
 //日志打印
 #ifdef DEBUG
@@ -41,6 +41,6 @@ _Pragma("clang diagnostic pop") \
 //拼接字符串
 #define NSStringFormat(format,...) [NSString stringWithFormat:format,##__VA_ARGS__]
 
-#define NSUserDefaultsManager  [NSUserDefaults standardUserDefaults]
+#define RMUserDefaults  [NSUserDefaults standardUserDefaults]
 
 #endif /* GlobalMarcro_h */

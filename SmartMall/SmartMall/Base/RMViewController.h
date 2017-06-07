@@ -16,7 +16,7 @@ typedef enum : NSUInteger {
 
 @interface RMViewController : UIViewController
 
-@property (nonatomic,assign) NaviColor naviColor;
+@property (nonatomic,assign) NaviColor barColor;
 
 //设置左边的返回按钮
 - (void)setLeftBackButton;

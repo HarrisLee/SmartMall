@@ -16,6 +16,7 @@
 #import "AppConstant.h"
 #import "EnumConstant.h"
 #import "FontsConstant.h"
+#import "HTTPConstants.h"
 #import "NSDate+RMFoundation.h"
 #import "UINavigationController+KMNavigationBarTransition.h"
 #import "UIViewController+KMNavigationBarTransition.h"

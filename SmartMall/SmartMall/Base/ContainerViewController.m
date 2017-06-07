@@ -10,7 +10,7 @@
 #import "HomeViewController.h"
 #import "RMNavigationController.h"
 
-@interface ContainerViewController ()
+@interface ContainerViewController ()<UITabBarControllerDelegate>
 
 @end
 
@@ -53,8 +53,17 @@
     homeNavi3.tabBarItem.selectedImage = [UIImage imageNamed:@"tab_icon_home_sel"];
     
     [self.tabBar setTintColor:[UIColor colorWithRed:0.14 green:0.71 blue:0.97 alpha:1.00]];
+    self.delegate = self;
     self.viewControllers = @[homeNavi,homeNavi1,homeNavi2,homeNavi3];
 }
+
+- (BOOL)tabBarController:(UITabBarController *)tabBarController shouldSelectViewController:(UIViewController *)viewController
+{
+    NSInteger index = [tabBarController.viewControllers indexOfObject:viewController];
+    DLog(@"%ld-%ld",tabBarController.selectedIndex,index);
+    return YES;
+}
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

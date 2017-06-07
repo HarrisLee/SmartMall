@@ -26,7 +26,7 @@
     // Do any additional setup after loading the view.
     self.automaticallyAdjustsScrollViewInsets = NO;
     self.view.backgroundColor = [UIColor colorWithHexString:@"#F2F2F2"];
-    self.naviColor = NaviColorBlue;
+    self.barColor = NaviColorBlue;
     [[NSNotificationCenter defaultCenter] addObserver:self
                                              selector:@selector(userNetWorkChange)
                                                  name:@"kUserNetWorkNotification"
@@ -80,12 +80,12 @@
 }
 
 #pragma mark - Setter.Getter
-- (void)setNaviColor:(NaviColor)naviColor
+- (void)setBarColor:(NaviColor)barColor
 {
-    _naviColor = naviColor;
+    _barColor = barColor;
     UINavigationBar *bar = self.navigationController.navigationBar;
     UIColor *color = nil;
-    switch (naviColor) {
+    switch (barColor) {
         case NaviColorBlue:
             color = [UIColor colorWithHexString:@"#18b4ed"];
             break;

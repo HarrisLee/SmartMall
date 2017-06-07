@@ -29,7 +29,7 @@
     token=[token stringByReplacingOccurrencesOfString:@"<" withString:@""];
     token=[token stringByReplacingOccurrencesOfString:@">" withString:@""];
     token=[token stringByReplacingOccurrencesOfString:@" " withString:@""];
-    [NSUserDefaultsManager setValue:token forKey:kLastAPNSToken];
+    [RMUserDefaults setValue:token forKey:kLastAPNSToken];
     //注册成功后，注册服务器推送
     DLog(@"apns token:%@",token);
 }

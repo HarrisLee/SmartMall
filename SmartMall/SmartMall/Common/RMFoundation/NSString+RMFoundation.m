@@ -38,4 +38,18 @@
     return [self contentWidthWithFont:font limit:[UIScreen mainScreen].bounds.size.width];
 }
 
+- (id)serilization
+{
+    if (![RMUtils isValidString:self]) {
+        return nil;
+    }
+    NSError *error = nil;
+    id obj = [NSJSONSerialization JSONObjectWithData:[self dataUsingEncoding:NSUTF8StringEncoding]
+                                             options:NSJSONReadingMutableContainers error:&error];
+    if (error) {
+        return nil;
+    }
+    return obj;
+}
+
 @end

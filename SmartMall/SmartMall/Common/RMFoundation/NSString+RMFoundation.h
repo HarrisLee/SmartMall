@@ -16,4 +16,7 @@
 
 - (CGFloat)contentWidthWithFont:(UIFont *)font;
 
+//将json字符串转换成对象
+- (id)serilization;
+
 @end

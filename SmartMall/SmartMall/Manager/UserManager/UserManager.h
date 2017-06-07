@@ -14,6 +14,8 @@
 
 @property (nonatomic,copy) NSString *userAvater;
 
+@property (nonatomic,copy) NSString *phoneNumber;
+
 + (instancetype)shareInstance;
 
 @end

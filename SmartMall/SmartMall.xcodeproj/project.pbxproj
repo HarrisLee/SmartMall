@@ -170,6 +170,7 @@
 		444E66AA1ED6B15F0016C80D /* DataBaseManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataBaseManager.m; sourceTree = "<group>"; };
 		444E66AE1ED6B2CD0016C80D /* EnumConstant.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EnumConstant.h; sourceTree = "<group>"; };
 		444E66AF1ED6B4300016C80D /* FontsConstant.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FontsConstant.h; sourceTree = "<group>"; };
+		448B85D31EE79CF000D08DF3 /* HTTPConstants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HTTPConstants.h; sourceTree = "<group>"; };
 		448CF8DA1ED7B64100AE26CF /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
 		448CF8DB1ED7B64100AE26CF /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
 		448CF8DC1ED7B64100AE26CF /* NextViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NextViewController.h; sourceTree = "<group>"; };
@@ -447,11 +448,11 @@
 		444E66A21ED6B15F0016C80D /* Manager */ = {
 			isa = PBXGroup;
 			children = (
-				448CF8E71ED7BEBD00AE26CF /* LocationManager */,
-				448CF8E21ED7B68000AE26CF /* NetworkManager */,
-				448CF8E31ED7B68000AE26CF /* UserManager */,
 				444E66A31ED6B15F0016C80D /* AppLaunchManager */,
 				444E66A61ED6B15F0016C80D /* DataManager */,
+				448CF8E21ED7B68000AE26CF /* NetworkManager */,
+				448CF8E71ED7BEBD00AE26CF /* LocationManager */,
+				448CF8E31ED7B68000AE26CF /* UserManager */,
 			);
 			path = Manager;
 			sourceTree = "<group>";
@@ -629,6 +630,7 @@
 				44D6769F1ED568C100579497 /* AppConstant.h */,
 				444E66AE1ED6B2CD0016C80D /* EnumConstant.h */,
 				444E66AF1ED6B4300016C80D /* FontsConstant.h */,
+				448B85D31EE79CF000D08DF3 /* HTTPConstants.h */,
 			);
 			path = Constant;
 			sourceTree = "<group>";

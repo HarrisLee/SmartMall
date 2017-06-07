@@ -19,7 +19,7 @@
     // Do any additional setup after loading the view.
     self.title = @"二级页面";
     [self setLeftBackButton];
-    self.naviColor = NaviColorRed;
+    self.barColor = NaviColorRed;
 }
 
 - (void)didReceiveMemoryWarning {
