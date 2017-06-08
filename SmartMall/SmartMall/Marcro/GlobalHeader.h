@@ -41,5 +41,6 @@
 #import <MBProgressHUD/MBProgressHUD.h>
 #import <YTKNetwork/YTKNetwork.h>
 #import <Masonry/Masonry.h>
+#import <JSObjection.h>
 
 #endif /* GlobalHeader_h */

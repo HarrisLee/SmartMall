@@ -26,13 +26,15 @@ static LaunchManager *manager = nil;
 - (void)globalConfiguration
 {
     [[LocationManager defaultManager] startLocation];
+    
+    JSObjectionInjector *injection = [JSObjection defaultInjector];
+    injection = injection ? : [JSObjection createInjector];
+    [JSObjection setDefaultInjector:injection];
 }
 
 - (void)launchApplication:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-//    [[UIApplication sharedApplication] setStatusBarHidden:NO];
     [self globalConfiguration];
-    
 
 }
 
