@@ -43,4 +43,22 @@ _Pragma("clang diagnostic pop") \
 
 #define RMUserDefaults  [NSUserDefaults standardUserDefaults]
 
+//跳转系统隐私
+#define RM_GO_SYSTEM_PRIVACY \
+{\
+NSURL *url = [NSURL URLWithString:@"App-Prefs:root=Privacy"];\
+if ([[UIApplication sharedApplication] canOpenURL:url]) {\
+[[UIApplication sharedApplication] openURL:url];\
+}\
+}
+
+//跳转app隐私
+#define RM_GO_APP_PRIVACY \
+{\
+NSURL *url = [NSURL URLWithString:UIApplicationOpenSettingsURLString];\
+if ([[UIApplication sharedApplication] canOpenURL:url]) {\
+[[UIApplication sharedApplication] openURL:url];\
+}\
+}
+
 #endif /* GlobalMarcro_h */

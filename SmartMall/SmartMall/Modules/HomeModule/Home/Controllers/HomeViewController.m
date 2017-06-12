@@ -79,10 +79,7 @@
 - (void)ssssss
 {
     [self.navigationController pushViewController:[[NextViewController alloc] init] animated:YES];
-//    NSURL *url = [NSURL URLWithString:UIApplicationOpenSettingsURLString];
-//    if ([[UIApplication sharedApplication] canOpenURL:url]) {
-//        [[UIApplication sharedApplication] openURL:url];
-//    }
+    RM_GO_SYSTEM_PRIVACY;
 }
 
 @end
