@@ -66,7 +66,6 @@
 		448CF8EF1ED7BEBD00AE26CF /* LocationInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 448CF8EB1ED7BEBD00AE26CF /* LocationInfo.m */; };
 		448CF8F01ED7BEBD00AE26CF /* LocationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 448CF8ED1ED7BEBD00AE26CF /* LocationManager.m */; };
 		448CF8F31ED7C93D00AE26CF /* UserManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 448CF8F21ED7C93D00AE26CF /* UserManager.m */; };
-		448CF8F61ED7C9A400AE26CF /* RMBaseRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 448CF8F51ED7C9A400AE26CF /* RMBaseRequest.m */; };
 		448CF8F91ED7CD6800AE26CF /* AppDelegate+PushHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 448CF8F81ED7CD6800AE26CF /* AppDelegate+PushHandler.m */; };
 		448CF8FE1ED7D09B00AE26CF /* PPNetworkCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 448CF8FB1ED7D09B00AE26CF /* PPNetworkCache.m */; };
 		448CF8FF1ED7D09B00AE26CF /* PPNetworkHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 448CF8FD1ED7D09B00AE26CF /* PPNetworkHelper.m */; };
@@ -202,8 +201,6 @@
 		448CF8ED1ED7BEBD00AE26CF /* LocationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocationManager.m; sourceTree = "<group>"; };
 		448CF8F11ED7C93D00AE26CF /* UserManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserManager.h; sourceTree = "<group>"; };
 		448CF8F21ED7C93D00AE26CF /* UserManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserManager.m; sourceTree = "<group>"; };
-		448CF8F41ED7C9A400AE26CF /* RMBaseRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RMBaseRequest.h; sourceTree = "<group>"; };
-		448CF8F51ED7C9A400AE26CF /* RMBaseRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RMBaseRequest.m; sourceTree = "<group>"; };
 		448CF8F71ED7CD6800AE26CF /* AppDelegate+PushHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "AppDelegate+PushHandler.h"; sourceTree = "<group>"; };
 		448CF8F81ED7CD6800AE26CF /* AppDelegate+PushHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "AppDelegate+PushHandler.m"; sourceTree = "<group>"; };
 		448CF8FA1ED7D09B00AE26CF /* PPNetworkCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PPNetworkCache.h; sourceTree = "<group>"; };
@@ -583,8 +580,6 @@
 				448CF8FB1ED7D09B00AE26CF /* PPNetworkCache.m */,
 				448CF8FC1ED7D09B00AE26CF /* PPNetworkHelper.h */,
 				448CF8FD1ED7D09B00AE26CF /* PPNetworkHelper.m */,
-				448CF8F41ED7C9A400AE26CF /* RMBaseRequest.h */,
-				448CF8F51ED7C9A400AE26CF /* RMBaseRequest.m */,
 			);
 			path = NetworkManager;
 			sourceTree = "<group>";
@@ -915,7 +910,6 @@
 				444E66A11ED6B0FC0016C80D /* AppDelegate.m in Sources */,
 				440D3D321ED9254F00C09F01 /* RITLPhotoStoreConfiguraion.m in Sources */,
 				440D3D341ED9254F00C09F01 /* PHAssetCollection+RITLPhotoRepresentation.m in Sources */,
-				448CF8F61ED7C9A400AE26CF /* RMBaseRequest.m in Sources */,
 				445CDC711EE7D6280027D0D1 /* NSString+RMFoundation.m in Sources */,
 				448CF8E11ED7B64100AE26CF /* NextViewController.m in Sources */,
 			);

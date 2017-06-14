@@ -166,6 +166,7 @@ typedef void(^PPNetworkStatus)(PPNetworkStatusType status);
                            success:(PPHttpRequestSuccess)success
                            failure:(PPHttpRequestFailed)failure;
 
+
 /**
  *  GET请求,自动缓存
  *

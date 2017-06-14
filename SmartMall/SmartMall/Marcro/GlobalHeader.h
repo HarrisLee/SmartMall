@@ -26,7 +26,6 @@
 #import "NSString+RMFoundation.h"
 #import "RMUtils.h"
 #import "LocationManager.h"
-#import "RMBaseRequest.h"
 #import "PPNetworkHelper.h"
 #import "PPNetworkCache.h"
 

@@ -30,6 +30,8 @@ static LaunchManager *manager = nil;
     JSObjectionInjector *injection = [JSObjection defaultInjector];
     injection = injection ? : [JSObjection createInjector];
     [JSObjection setDefaultInjector:injection];
+    
+    [[YTKNetworkConfig sharedConfig] setBaseUrl:@""];
 }
 
 - (void)launchApplication:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
