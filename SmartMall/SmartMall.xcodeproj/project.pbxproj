@@ -59,6 +59,7 @@
 		445CDC711EE7D6280027D0D1 /* NSString+RMFoundation.m in Sources */ = {isa = PBXBuildFile; fileRef = 445CDC6B1EE7D6280027D0D1 /* NSString+RMFoundation.m */; };
 		445CDC721EE7D6280027D0D1 /* UIColor+RMFoundation.m in Sources */ = {isa = PBXBuildFile; fileRef = 445CDC6D1EE7D6280027D0D1 /* UIColor+RMFoundation.m */; };
 		445CDC731EE7D6280027D0D1 /* UIImage+RMFoundation.m in Sources */ = {isa = PBXBuildFile; fileRef = 445CDC6F1EE7D6280027D0D1 /* UIImage+RMFoundation.m */; };
+		448621A11F0260540083FA90 /* RMUtils+View.m in Sources */ = {isa = PBXBuildFile; fileRef = 448621A01F0260540083FA90 /* RMUtils+View.m */; };
 		448CF8E01ED7B64100AE26CF /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 448CF8DB1ED7B64100AE26CF /* HomeViewController.m */; };
 		448CF8E11ED7B64100AE26CF /* NextViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 448CF8DD1ED7B64100AE26CF /* NextViewController.m */; };
 		448CF8E61ED7BB5E00AE26CF /* AppDelegate+CompletionHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 448CF8E51ED7BB5E00AE26CF /* AppDelegate+CompletionHandler.m */; };
@@ -186,6 +187,8 @@
 		445CDC6D1EE7D6280027D0D1 /* UIColor+RMFoundation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+RMFoundation.m"; sourceTree = "<group>"; };
 		445CDC6E1EE7D6280027D0D1 /* UIImage+RMFoundation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+RMFoundation.h"; sourceTree = "<group>"; };
 		445CDC6F1EE7D6280027D0D1 /* UIImage+RMFoundation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+RMFoundation.m"; sourceTree = "<group>"; };
+		4486219F1F0260540083FA90 /* RMUtils+View.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "RMUtils+View.h"; sourceTree = "<group>"; };
+		448621A01F0260540083FA90 /* RMUtils+View.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "RMUtils+View.m"; sourceTree = "<group>"; };
 		448B85D31EE79CF000D08DF3 /* HTTPConstants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HTTPConstants.h; sourceTree = "<group>"; };
 		448CF8DA1ED7B64100AE26CF /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
 		448CF8DB1ED7B64100AE26CF /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
@@ -688,6 +691,8 @@
 				44D676B61ED57BF400579497 /* iOSPlatform.plist */,
 				44D676B01ED57A4400579497 /* RMUtils.h */,
 				44D676B11ED57A4400579497 /* RMUtils.m */,
+				4486219F1F0260540083FA90 /* RMUtils+View.h */,
+				448621A01F0260540083FA90 /* RMUtils+View.m */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -865,6 +870,7 @@
 				440D3D241ED9254F00C09F01 /* RITLPhotoGroupViewModel.m in Sources */,
 				440D3D1F1ED9254F00C09F01 /* RITLPhotoBrowseCell.m in Sources */,
 				440D3CCC1ED919C700C09F01 /* UINavigationController+KMNavigationBarTransition.m in Sources */,
+				448621A11F0260540083FA90 /* RMUtils+View.m in Sources */,
 				440D3D301ED9254F00C09F01 /* RITLPhotoRequestStore.m in Sources */,
 				448CF8EE1ED7BEBD00AE26CF /* ChineseToPinyin.m in Sources */,
 				440D3D231ED9254F00C09F01 /* RITLPhotoGroupViewController.m in Sources */,

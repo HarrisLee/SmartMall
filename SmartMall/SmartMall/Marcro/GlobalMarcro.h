@@ -10,6 +10,12 @@
 #define GlobalMarcro_h
 
 #define WS(weakSelf)   __weak __typeof(&*self)weakSelf = self;
+#define StrongSelf(type)  __strong typeof(type) type = weak##type;
+
+//角度转弧度
+#define DegreesToRadian(x) (M_PI * (x) / 180.0)
+//弧度转角度
+#define RadianToDegrees(radian) (radian*180.0)/(M_PI)
 
 //当前系统版本
 #define IOS10_OR_LATER	([[[UIDevice currentDevice] systemVersion] floatValue] >= 10.0)

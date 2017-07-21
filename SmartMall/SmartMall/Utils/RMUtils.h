@@ -104,4 +104,6 @@ NSString *stringFromDic(NSDictionary *dic, NSString *key);
 
 NSString *ClassName(Class cls);
 
+UIImage *rm_getImage(NSString *image);
+
 @end

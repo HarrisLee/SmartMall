@@ -401,7 +401,7 @@
     NSString *sImagePath = [[[NSBundle mainBundle] bundlePath] stringByAppendingPathComponent:imageName];
     UIImage *image = [UIImage imageWithContentsOfFile:sImagePath];
     if (nil == image)
-        image = [UIImage imageNamed:imageName];
+        image = rm_getImage(imageName);
     return image;
 }
 
@@ -487,5 +487,9 @@ NSString* ClassName(Class cls)
     return name;
 }
 
+UIImage *rm_getImage(NSString *image)
+{
+    return [UIImage imageNamed:image];
+}
 
 @end
